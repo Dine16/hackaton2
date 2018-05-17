@@ -6,8 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% stylesheets
-            'css/jquery.bracket.min.css'
             'css/bootstrap.min.css'
+            'css/animate.css'
+            'css/owl.caroussel.min.css'
+            'css/style.css'
+            'css/jquery.bracket.min.css'
             filter='cssrewrite' output='css/compiled/app.css' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -49,8 +52,13 @@
             {% javascripts
                 'js/bootstrap.min.js'
                 'js/jquery-slim.min.js'
-                'js/tournament.js'
+                'js/jquery.stellar.min.js'
+                'js/jquery.waypoints.min.js'
+                'js/main.js'
+                'js/owl.carousel.min.js'
+                'js/popper.min.js'
                 'js/jquery.bracket.min.js'
+                'js/tournament.js'
                 output='js/compiled/app.js' %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}

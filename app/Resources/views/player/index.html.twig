@@ -7,9 +7,11 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Image</th>
                 <th>Gender</th>
+                <th>Team</th>
+                <th>Universe</th>
                 <th>Description</th>
+                <th>Image</th>
                 <th>Isonbench</th>
                 <th>Actions</th>
             </tr>
@@ -18,9 +20,11 @@
         {% for player in players %}
             <tr>
                 <td>{{ player.name }}</td>
-                <td><img src="{{ player.image }}"></td>
                 <td>{{ player.gender }}</td>
+                <td>{{ player.team }}</td>
+                <td>{{ player.universe }}</td>
                 <td>{{ player.description }}</td>
+                <td><img src="{{ player.image }}"></td>
                 <td>{% if player.isOnBench %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>

@@ -6,7 +6,6 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Place</th>
                 <th>Name</th>
                 <th>Description</th>
@@ -17,11 +16,10 @@
         <tbody>
         {% for universe in universes %}
             <tr>
-                <td><a href="{{ path('universe_show', { 'id': universe.id }) }}">{{ universe.id }}</a></td>
                 <td>{{ universe.place }}</td>
                 <td>{{ universe.name }}</td>
                 <td>{{ universe.description }}</td>
-                <td>{{ universe.image }}</td>
+                <td><img src="{{ universe.image }}"></td>
                 <td>
                     <ul>
                         <li>

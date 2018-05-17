@@ -6,7 +6,6 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
                 <th>Image</th>
                 <th>Gender</th>
@@ -18,9 +17,8 @@
         <tbody>
         {% for player in players %}
             <tr>
-                <td><a href="{{ path('player_show', { 'id': player.id }) }}">{{ player.id }}</a></td>
                 <td>{{ player.name }}</td>
-                <td>{{ player.image }}</td>
+                <td><img src="{{ player.image }}"></td>
                 <td>{{ player.gender }}</td>
                 <td>{{ player.description }}</td>
                 <td>{% if player.isOnBench %}Yes{% else %}No{% endif %}</td>

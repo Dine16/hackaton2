@@ -1,41 +1,30 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Teams list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Image</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for team in teams %}
-            <tr>
-                <td><a href="{{ path('team_show', { 'id': team.id }) }}">{{ team.id }}</a></td>
-                <td>{{ team.name }}</td>
-                <td>{{ team.image }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('team_show', { 'id': team.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('team_edit', { 'id': team.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('team_new') }}">Create a new team</a>
-        </li>
-    </ul>
+    <section class="site-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7 text-center">
+                    <h2>Liste des équipes</h2>
+                </div>
+            </div>
+                <div class="row top-course">
+                {% for team in teams %}
+                    <div class=" center col-lg-2 col-md-4 col-sm-6 col-12">
+                        <a href="#" class="course">
+                            <img src="{{ team.image }}" alt="Team">
+                            <h2>{{ team.name }}</h2>
+                        </a>
+                        <a href="{{ path('team_show', { 'id': team.id }) }}">Composition</a><br>
+                        <a href="{{ path('team_edit', { 'id': team.id }) }}">Modifier</a>
+                    </div>
+                {% endfor %}
+                </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <button class="btn btn-primary"><a class="create" {{ path('team_new') }}">Créer une équipe</a></button>
+            </div>
+        </div>
+    </section>
 {% endblock %}

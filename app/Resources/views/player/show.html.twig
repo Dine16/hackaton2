@@ -6,16 +6,8 @@
     <table>
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ player.id }}</td>
-            </tr>
-            <tr>
                 <th>Name</th>
                 <td>{{ player.name }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ player.image }}</td>
             </tr>
             <tr>
                 <th>Gender</th>
@@ -24,6 +16,10 @@
             <tr>
                 <th>Description</th>
                 <td>{{ player.description }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ player.image }}"></td>
             </tr>
             <tr>
                 <th>Isonbench</th>

@@ -66,9 +66,11 @@ class TeamController extends Controller
     public function showAction(Team $team)
     {
         $deleteForm = $this->createDeleteForm($team);
+        $players = $team->getTeams();
 
         return $this->render('team/show.html.twig', array(
             'team' => $team,
+            'players' => $players,
             'delete_form' => $deleteForm->createView(),
         ));
     }

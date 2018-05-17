@@ -13,6 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 class Team
 {
     /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Player", mappedBy="team")
+     */
+    private $teams;
+
+    public function __toString()
+    {
+        return $this->name;
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -93,5 +103,47 @@ class Team
     {
         return $this->image;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->teams = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Add team.
+     *
+     * @param \AppBundle\Entity\Player $team
+     *
+     * @return Team
+     */
+    public function addTeam(\AppBundle\Entity\Player $team)
+    {
+        $this->teams[] = $team;
+
+        return $this;
+    }
+
+    /**
+     * Remove team.
+     *
+     * @param \AppBundle\Entity\Player $team
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeTeam(\AppBundle\Entity\Player $team)
+    {
+        return $this->teams->removeElement($team);
+    }
+
+    /**
+     * Get teams.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTeams()
+    {
+        return $this->teams;
+    }
+}

@@ -6,11 +6,12 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
-                <th>Image</th>
                 <th>Gender</th>
+                <th>Team</th>
+                <th>Universe</th>
                 <th>Description</th>
+                <th>Image</th>
                 <th>Isonbench</th>
                 <th>Actions</th>
             </tr>
@@ -18,11 +19,12 @@
         <tbody>
         {% for player in players %}
             <tr>
-                <td><a href="{{ path('player_show', { 'id': player.id }) }}">{{ player.id }}</a></td>
                 <td>{{ player.name }}</td>
-                <td>{{ player.image }}</td>
                 <td>{{ player.gender }}</td>
+                <td>{{ player.team }}</td>
+                <td>{{ player.universe }}</td>
                 <td>{{ player.description }}</td>
+                <td><img src="{{ player.image }}"></td>
                 <td>{% if player.isOnBench %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>

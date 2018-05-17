@@ -13,6 +13,17 @@ use Doctrine\ORM\Mapping as ORM;
 class Player
 {
     /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Universe", inversedBy="universes")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $universe;
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Team", inversedBy="teams")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $team;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -186,5 +197,52 @@ class Player
     {
         return $this->isOnBench;
     }
-}
 
+    /**
+     * Set universe.
+     *
+     * @param \AppBundle\Entity\Universe $universe
+     *
+     * @return Player
+     */
+    public function setUniverse(\AppBundle\Entity\Universe $universe)
+    {
+        $this->universe = $universe;
+
+        return $this;
+    }
+
+    /**
+     * Get universe.
+     *
+     * @return \AppBundle\Entity\Universe
+     */
+    public function getUniverse()
+    {
+        return $this->universe;
+    }
+
+    /**
+     * Set team.
+     *
+     * @param \AppBundle\Entity\Team $team
+     *
+     * @return Player
+     */
+    public function setTeam(\AppBundle\Entity\Team $team)
+    {
+        $this->team = $team;
+
+        return $this;
+    }
+
+    /**
+     * Get team.
+     *
+     * @return \AppBundle\Entity\Team
+     */
+    public function getTeam()
+    {
+        return $this->team;
+    }
+}

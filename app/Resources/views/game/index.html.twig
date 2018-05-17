@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Games list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Teamone</th>
+                <th>Teamtwo</th>
+                <th>Date</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th>Nbpool</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for game in games %}
+            <tr>
+                <td><a href="{{ path('game_show', { 'id': game.id }) }}">{{ game.id }}</a></td>
+                <td>{{ game.teamOne }}</td>
+                <td>{{ game.teamTwo }}</td>
+                <td>{% if game.date %}{{ game.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ game.score }}</td>
+                <td>{{ game.status }}</td>
+                <td>{{ game.nbPool }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('game_show', { 'id': game.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

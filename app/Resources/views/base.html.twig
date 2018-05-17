@@ -6,15 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% stylesheets
+            'css/jquery.bracket.min.css'
             'css/bootstrap.min.css'
-            'css/animate.css'
-            'css/owl.carousel.min.css'
-            'css/style.css'
             filter='cssrewrite' output='css/compiled/app.css' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
-        {% endstylesheets %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.bracket.min.css') }}" />
+        {% endstylesheets %}
     </head>
     <body>
     <header role="banner">
@@ -47,16 +46,13 @@
     </header>
     <!-- END header -->
         {% block body %}{% endblock %}
-        {% javascripts
-            'js/jquery-slim.min.js'
-            'js/bootstrap.min.js'
-            'jquery.stellar.min.js'
-            'jquery.waypoints.min.js'
-            'main.js'
-            'owl.carousel.min.js'
-            'popper.min.js'
-            output='js/compiled/app.js' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
+            {% javascripts
+                'js/bootstrap.min.js'
+                'js/jquery-slim.min.js'
+                'js/tournament.js'
+                'js/jquery.bracket.min.js'
+                output='js/compiled/app.js' %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
     </body>
 </html>

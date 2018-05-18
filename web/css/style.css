@@ -1503,3 +1503,11 @@ div.pad {
 div.center1 {
   text-align: center;
 }
+
+div.text-center.pad {
+  padding-bottom: 5%;
+}
+
+.teamContainer {
+  margin-bottom: 5px;
+}

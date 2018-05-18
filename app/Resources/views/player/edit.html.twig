@@ -1,21 +1,61 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Modifier le joueur</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Modifier" />
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('player_index') }}">Retour aux joueurs</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Supprimer">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <section class="site-section bg-light" style="background-image: url(https://www.wallpapersrc.com/img/68332619398941cfae681adc4394cc26/superhero-art-avengers-infinity-war-1920x1217.jpg);">
+        <div class="container view">
+            <h2 class="align">Modifier un joueur</h2>
+            {{ form_start(edit_form) }}
+            <div class="row">
+                <div class="col-md-12 pad">
+                    {{ form_label(edit_form.name, 'Nom') }}
+                    {{ form_widget(edit_form.name, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 pad">
+                    {{ form_label(edit_form.image, 'Image')}}
+                    {{ form_widget(edit_form.image, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 pad">
+                    {{ form_label(edit_form.gender, 'Genre')}}
+                    {{ form_widget(edit_form.gender, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 pad">
+                    {{ form_label(edit_form.description, 'Biographie')}}
+                    {{ form_widget(edit_form.description, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 pad">
+                    {{ form_label(edit_form.isOnBench, 'Sur le banc ?')}}
+                    {{ form_widget(edit_form.isOnBench, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="col-md-4 pad">
+                    {{ form_label(edit_form.universe, 'Univers')}}
+                    {{ form_widget(edit_form.universe, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="col-md-4 pad">
+                    {{ form_label(edit_form.team, 'Equipe')}}
+                    {{ form_widget(edit_form.team, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-4 center1">
+                    <input type="submit" class="btn btn-primary create top" value="Modifier" />
+                </div>
+                <div class="col-md-4 center1">
+                    <input type="submit" class="btn btn-primary create top" value="Retour à la liste" />
+                </div>
+                <div class="col-md-4 center1">
+                    <input type="submit" class="btn btn-primary create top" value="Supprimer" />
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

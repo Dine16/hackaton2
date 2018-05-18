@@ -3,6 +3,8 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +15,16 @@ class PlayerType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('image')->add('gender')->add('description')->add('isOnBench')->add('universe')->add('team');
+        $builder
+            ->add('name')
+            ->add('image')
+            ->add('gender')
+            ->add('description',TextareaType::class)
+            ->add('isOnBench', ChoiceType::class, array(
+                'choices'=> array('Oui'=>'1', 'Non'=>'0'),
+            ))
+            ->add('universe')
+            ->add('team');
     }/**
      * {@inheritdoc}
      */

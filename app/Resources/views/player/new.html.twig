@@ -1,16 +1,59 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Player creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <section class="site-section bg-light" style="background-image: url(http://longwallpapers.com/Desktop-Wallpaper/marvel-wallpaper-hd-resolution-For-Desktop-Wallpaper.jpg);">
+        <div class="container view">
+            <h2 class="align">Ajouter un Joueur</h2>
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-12">
+                    {{ form_label(form.name, 'Nom') }}
+                    {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pad">
+                    {{ form_label(form.image, 'Image')}}
+                    {{ form_widget(form.image, { 'attr': {'class': 'form-control'} }) }}
+                </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('player_index') }}">Back to the list</a>
-        </li>
-    </ul>
+                <div class="col-md-6 pad">
+                    {{ form_label(form.gender, 'Sexe') }}
+                    {{ form_widget(form.gender, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 pad">
+                    {{ form_label(form.description, 'Description' )}}
+                    {{ form_widget(form.description, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 pad">
+                    {{  form_label(form.isOnBench, 'Sur le Banc' )}}
+                    {{ form_widget(form.isOnBench, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+
+                <div class="col-md-4 pad">
+                    {{  form_label(form.universe, 'Univers' )}}
+                    {{ form_widget(form.universe, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+
+                <div class="col-md-4 pad">
+                    {{  form_label(form.team, 'Equipe' )}}
+                    {{ form_widget(form.team, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-12 center1">
+                    <input type="submit" class="btn btn-primary create top" value="Create" style="width: 40%;" />
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
 {% endblock %}

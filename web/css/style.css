@@ -460,7 +460,7 @@ header .navbar.navbar-light .nav-link.active {
   color: #fff;
 }
 
-.top-course .course, .top-course .blog-entry, .blog-entries .course, .blog-entries .blog-entry {
+.top-course img.course, .top-course .blog-entry, .blog-entries .course, .blog-entries .blog-entry {
   display: block;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -1435,5 +1435,71 @@ a.create{
 }
 
 .center {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 3px 10px 3px;
+  background-color: rgba(187, 190, 193, 0.5);
+}
+
+.align {
+  display: block;
+  text-align: center;
+}
+
+img.course {
+  max-width: 130px;
+  max-height: 130px;
+}
+
+a.top {
+  margin-top: 5%;
+  width: 40%;
+}
+
+a.place {
+  color: black;
+}
+
+.row.place {
+  justify-content: space-around;
+}
+
+.site-section {
+  background-size: cover;
+  background-position: center center;
+  min-height: 750px;
+  height: 100%;
+}
+
+h2.white {
+  color: white;
+}
+
+img.courseplay {
+  max-width: 100%;
+  max-height: 150px;
+}
+
+a.btn.btn-primary.place.create {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: black;
+  background-color: lightgrey;
+  border: none;
+}
+
+div.view {
+  border : 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(187, 190, 193, 0.7);
+  padding: 10px 3px 10px 3px;
+}
+
+div.pad {
+  padding-top: 20px;
+}
+
+div.center1 {
   text-align: center;
 }

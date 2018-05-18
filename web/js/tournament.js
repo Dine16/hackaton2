@@ -1,13 +1,13 @@
 let bigData = {
     teams : [
-        ["Team 1",  "Team 2" ],
-        ["Team 3",  "Team 4" ],
-        ["Team 5",  "Team 6" ],
-        ["Team 7",  "Team 8" ],
-        ["Team 9",  "Team 10"],
-        ["Team 11", "Team 12"],
-        ["Team 13", "Team 14"],
-        ["Team 15", "Team 16"]
+        ["Star Wars",  "Dragon Ball" ],
+        ["DC Comics",  "Matrix" ],
+        ["Marvel",  "Chevaliers du Zodiaque" ],
+        ["Harry Potter",  "Star Trek" ],
+        ["Le Seigneur des Anneaux",  "Street Fighter"],
+        ["Mario", "Alien"],
+        ["Kill Bill", "Terminator"],
+        ["Transformers", "Tortues Ninja"]
     ],
     results : [[ /* WINNER BRACKET */
         [[3,5], [2,4], [6,3], [2,3], [1,5], [5,3], [7,2], [1,2]],

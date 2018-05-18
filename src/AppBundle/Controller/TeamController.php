@@ -24,7 +24,7 @@ class TeamController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $teams = $em->getRepository('AppBundle:Team')->findAll();
+        $teams = $em->getRepository('AppBundle:Team')->findBy(array(), array('name' => 'ASC'));
 
         return $this->render('team/index.html.twig', array(
             'teams' => $teams,

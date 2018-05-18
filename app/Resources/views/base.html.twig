@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% stylesheets
-            'css/bootstrap.min.css'
-            'css/animate.css'
-            'css/owl.caroussel.min.css'
-            'css/style.css'
-            'css/jquery.bracket.min.css'
-            filter='cssrewrite' output='css/compiled/app.css' %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
+<head>
+    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+
+    {% stylesheets
+        'css/bootstrap.min.css'
+        'css/animate.css'
+        'css/owl.caroussel.min.css'
+        'css/style.css'
+        'css/jquery.bracket.min.css'
+        filter='cssrewrite' output='css/compiled/app.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.bracket.min.css') }}" />
-        {% endstylesheets %}
-    </head>
-    <body>
-    <header role="banner">
-
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container">
-                <a class="navbar-brand absolute" href="/">Olympique Universe</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    {% endstylesheets %}
+</head>
+<body>
+<header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+            <a class="navbar-brand absolute" href="/">Olympique Universe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
                 <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
                     <ul class="navbar-nav mx-auto">
@@ -45,22 +46,10 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- END header -->
-        {% block body %}{% endblock %}
-            {% javascripts
-                'js/bootstrap.min.js'
-                'js/jquery-slim.min.js'
-                'js/jquery.stellar.min.js'
-                'js/jquery.waypoints.min.js'
-                'js/main.js'
-                'js/owl.carousel.min.js'
-                'js/popper.min.js'
-                'js/jquery.bracket.min.js'
-                'js/tournament.js'
-                output='js/compiled/app.js' %}
-                <script src="{{ asset_url }}"></script>
-            {% endjavascripts %}
-    </body>
+        </div>
+    </nav>
+</header>
+<!-- END header -->
+{% block body %}{% endblock %}
+</body>
 </html>

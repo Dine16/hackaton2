@@ -1448,8 +1448,8 @@ a.create{
 }
 
 img.course {
-  max-width: 130px;
-  max-height: 130px;
+  width: 130px;
+  height: 130px;
 }
 
 a.top {

@@ -1,47 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Players list</h1>
+    <section class="site-section" style="background-image: url(https://static.gamespot.com/uploads/scale_super/171/1712892/3361298-infinity-gauntlet-stones.jpg);">
+        <div class="container">
+            <div class="row place">
+                <div class="col-md-12 text-center">
+                    <h2 class="white">Liste des joueurs</h2>
+                </div>
+            </div>
+            <div class="row place">
+                {% for player in players %}
+                    <div class=" center col-lg-3 col-md-6 col-sm-6 col-6">
+                        <h2 class="white">{{ player.name }}</h2>
+                        <img class="course" src="{{ player.image }}" alt="Player"><br>
+                        <p>Genre : {{ player.gender }}</p>
+                        <p>Univers : {{ player.universe }}</p>
+                        <p>Equipe : {{ player.team }}</p>
+                        <a class=" btn btn-primary place create" href="{{ path('player_edit', { 'id': player.id }) }}">Modifier</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <br>
+                <a href="{{ path('player_new') }}" class="btn btn-primary create top" >Créer un joueur</a>
+            </div>
+        </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Image</th>
-                <th>Gender</th>
-                <th>Description</th>
-                <th>Isonbench</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for player in players %}
-            <tr>
-                <td><a href="{{ path('player_show', { 'id': player.id }) }}">{{ player.id }}</a></td>
-                <td>{{ player.name }}</td>
-                <td>{{ player.image }}</td>
-                <td>{{ player.gender }}</td>
-                <td>{{ player.description }}</td>
-                <td>{% if player.isOnBench %}Yes{% else %}No{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('player_show', { 'id': player.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('player_edit', { 'id': player.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('player_new') }}">Create a new player</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('player_index') }}">Retour à l'accueil</a>
+            </li>
+        </ul>
+    </section>
 {% endblock %}

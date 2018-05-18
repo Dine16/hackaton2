@@ -1,41 +1,29 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Teams list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Image</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for team in teams %}
-            <tr>
-                <td><a href="{{ path('team_show', { 'id': team.id }) }}">{{ team.id }}</a></td>
-                <td>{{ team.name }}</td>
-                <td>{{ team.image }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('team_show', { 'id': team.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('team_edit', { 'id': team.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('team_new') }}">Create a new team</a>
-        </li>
-    </ul>
+    <section class="site-section" style="background-image: url(https://static.gamespot.com/uploads/scale_super/171/1712892/3361298-infinity-gauntlet-stones.jpg);">
+        <div class="container">
+            <div class="row place">
+                <div class="col-md-12 text-center">
+                    <h2 class="white">Liste des équipes</h2>
+                </div>
+            </div>
+            <div class="row place">
+                {% for team in teams %}
+                    <div class=" center col-lg-3 col-md-6 col-sm-6 col-6">
+                        <h2 class="white">{{ team.name }}</h2>
+                        <img class="course" src="{{ team.image }}" alt="Team"><br>
+                        <a class=" btn btn-primary place create" href="{{ path('team_show', { 'id': team.id }) }}">Composition</a><br/>
+                        <a class=" btn btn-primary place create" href="{{ path('team_edit', { 'id': team.id }) }}">Modifier</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <br>
+                <a href="{{ path('team_new') }}" class="btn btn-primary create top" >Créer une équipe</a>
+            </div>
+        </div>
+    </section>
 {% endblock %}

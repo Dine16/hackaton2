@@ -1,0 +1,294 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Les équipes</h1>
+
+    <section>
+        <div id="big">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Que les jeux commencent !</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="demo">
+                            <div class="jQBracket lr" style="width: 1000px;">
+                                <div class="bracket" style="height: 520px;">
+                                    <div class="round" style="width: 200px; margin-right: 40px">
+                                        <div class="match" style="height: 65px;">
+                                            <div class="teamContainer" style="top: 10px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="0">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-1"></div>
+                                                </div>
+                                                <div class="team win" style="width: 200px;" data-teamid="1">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-2"></div>
+                                                </div>
+                                                <div class="connector" style="height: 10px; width: 20px; right: -22px; top: 32.75px; border-bottom: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; bottom: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 65px;">
+                                            <div class="teamContainer" style="top: 10px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="2">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-3"></div>
+                                                </div>
+                                                <div class="team win" style="width: 200px;" data-teamid="3">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-4"></div>
+                                                </div>
+                                                <div class="connector" style="height: 32.5px; width: 20px; right: -22px; bottom: 10.25px; border-top: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; top: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 65px;">
+                                            <div class="teamContainer" style="top: 10px;">
+                                                <div class="team win" style="width: 200px;" data-teamid="4">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-5"></div>
+                                                </div>
+                                                <div class="team lose" style="width: 200px;" data-teamid="5">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-6"></div>
+                                                </div>
+                                                <div class="connector" style="height: 32.5px; width: 20px; right: -22px; top: 10.25px; border-bottom: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; bottom: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 65px;">
+                                            <div class="teamContainer" style="top: 10px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="6">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-7"></div>
+                                                </div>
+                                                <div class="team win" style="width: 200px;" data-teamid="7">
+                                                    <div class="label" style="width: 70px;">Team 8</div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-8"></div>
+                                                </div>
+                                                <div class="connector" style="height: 32.5px; width: 20px; right: -22px; bottom: 10.25px; border-top: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; top: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 65px;">
+                                            <div class="teamContainer" style="top: 10px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="8">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-9">1</div>
+                                                </div>
+                                                <div class="team win highlightLoser" style="width: 200px;" data-teamid="9">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-10"></div>
+                                                </div>
+                                                <div class="connector" style="height: 32.5px; width: 20px; right: -22px; top: 10.25px; border-bottom: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; bottom: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 65px;">
+                                            <div class="teamContainer" style="top: 10px;">
+                                                <div class="team win highlightWinner" style="width: 200px;" data-teamid="10">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-11"></div>
+                                                </div>
+                                                <div class="team lose" style="width: 200px;" data-teamid="11">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-12"></div>
+                                                </div>
+                                                <div class="connector highlightWinner" style="height: 10px; width: 20px; right: -22px; bottom: 32.75px; border-top: none;">
+                                                    <div class="connector highlightWinner" style="width: 20px; right: -20px; top: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 65px;">
+                                            <div class="teamContainer" style="top: 10px;">
+                                                <div class="team win" style="width: 200px;" data-teamid="12">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-13"></div>
+                                                </div>
+                                                <div class="team lose" style="width: 200px;" data-teamid="13">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-14"></div>
+                                                </div>
+                                                <div class="connector" style="height: 32.5px; width: 20px; right: -22px; top: 10.25px; border-bottom: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; bottom: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 65px;">
+                                            <div class="teamContainer" style="top: 10px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="14">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-15"></div>
+                                                </div>
+                                                <div class="team win" style="width: 200px;" data-teamid="15">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-16"></div>
+                                                </div>
+                                                <div class="connector" style="height: 32.5px; width: 20px; right: -22px; bottom: 10.25px; border-top: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; top: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="round" style="width: 200px; margin-right: 40px">
+                                        <div class="match" style="height: 130px;">
+                                            <div class="teamContainer" style="top: 42.5px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="1">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-17"></div>
+                                                </div>
+                                                <div class="team win" style="width: 200px;" data-teamid="3">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-18"></div>
+                                                </div>
+                                                <div class="connector" style="height: 42.5px; width: 20px; right: -22px; top: 32.75px; border-bottom: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; bottom: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 130px;">
+                                            <div class="teamContainer" style="top: 42.5px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="4">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-19"></div>
+                                                </div>
+                                                <div class="team win" style="width: 200px;" data-teamid="7">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-20"></div>
+                                                </div>
+                                                <div class="connector" style="height: 65px; width: 20px; right: -22px; bottom: 10.25px; border-top: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; top: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 130px;">
+                                            <div class="teamContainer" style="top: 42.5px;">
+                                                <div class="team lose highlightLoser" style="width: 200px;" data-teamid="9">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-21"></div>
+                                                </div>
+                                                <div class="team win highlightWinner" style="width: 200px;" data-teamid="10">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-22"></div>
+                                                </div>
+                                                <div class="connector highlightWinner" style="height: 42.5px; width: 20px; right: -22px; top: 32.75px; border-bottom: none;">
+                                                    <div class="connector highlightWinner" style="width: 20px; right: -20px; bottom: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 130px;">
+                                            <div class="teamContainer" style="top: 42.5px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="12">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-23"></div>
+                                                </div>
+                                                <div class="team win" style="width: 200px;" data-teamid="15">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-24"></div>
+                                                </div>
+                                                <div class="connector" style="height: 65px; width: 20px; right: -22px; bottom: 10.25px; border-top: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; top: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="round" style="width: 200px; margin-right: 40px">
+                                        <div class="match" style="height: 260px;">
+                                            <div class="teamContainer" style="top: 107.5px;">
+                                                <div class="team win" style="width: 200px;" data-teamid="3">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-25"></div>
+                                                </div>
+                                                <div class="team lose" style="width: 200px;" data-teamid="7">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-26"></div>
+                                                </div>
+                                                <div class="connector" style="height: 130px; width: 20px; right: -22px; top: 10.25px; border-bottom: none;">
+                                                    <div class="connector" style="width: 20px; right: -20px; bottom: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="match" style="height: 260px;">
+                                            <div class="teamContainer" style="top: 107.5px;">
+                                                <div class="team win highlightWinner" style="width: 200px;" data-teamid="10">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-27"></div>
+                                                </div>
+                                                <div class="team lose" style="width: 200px;" data-teamid="15">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-28"></div>
+                                                </div>
+                                                <div class="connector highlightWinner" style="height: 107.5px; width: 20px; right: -22px; bottom: 32.75px; border-top: none;">
+                                                    <div class="connector highlightWinner" style="width: 20px; right: -20px; top: 0;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="round" style="width: 200px; margin-right: 40px">
+                                        <div class="match" style="height: 520px;">
+                                            <div class="teamContainer" style="top: 237.5px;">
+                                                <div class="team lose" style="width: 200px;" data-teamid="3">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-29"></div>
+                                                </div>
+                                                <div class="team win highlightWinner" style="width: 200px;" data-teamid="10">
+                                                    <div class="label" style="width: 70px;"></div>
+                                                    <div class="score" style="width: 30px;" data-resultid="result-30"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{{ asset('/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('/js/jquery.bracket.min.js') }}"></script>
+    <script>
+        let bddteams = [];
+        let team;
+        {% for team in teams %}
+        {% if loop.index0 is even %}
+        team = [];
+        team.push('{{ team.name }}');
+        console.log(team);
+        {% endif %}
+        {% if loop.index0 is odd %}
+        team.push('{{ team.name }}');
+        bddteams.push(team);
+        {% endif %}
+        {% endfor%}
+
+        let bigData = {
+            teams : bddteams,
+
+            results : [[  /*WINNER BRACKET */
+                [[3,1], [2,4], [6,3], [2,3], [1,5], [5,3], [7,2], [1,2]],
+                [[1,2], [3,4], [5,6], [7,8]],
+                [[0,1], [8,2]],
+                [[1,3]]
+            ]]
+        };
+
+        for (let i = 0; i < bigData.results.length; i++){
+            let rang =  document.getElementsByClassName('.score').value
+        }
+
+
+        $(function() {
+            $('div#big .demo').bracket({
+                skipConsolationRound: true,
+                init: bigData})
+        });
+    </script>
+{% endblock %}

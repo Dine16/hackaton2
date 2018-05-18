@@ -13,6 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 class Universe
 {
     /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Player", mappedBy="universe")
+     */
+    private $universes;
+
+    public function __toString()
+    {
+        return $this->name;
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -155,5 +165,47 @@ class Universe
     {
         return $this->image;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->universes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Add universe.
+     *
+     * @param \AppBundle\Entity\Player $universe
+     *
+     * @return Universe
+     */
+    public function addUniverse(\AppBundle\Entity\Player $universe)
+    {
+        $this->universes[] = $universe;
+
+        return $this;
+    }
+
+    /**
+     * Remove universe.
+     *
+     * @param \AppBundle\Entity\Player $universe
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeUniverse(\AppBundle\Entity\Player $universe)
+    {
+        return $this->universes->removeElement($universe);
+    }
+
+    /**
+     * Get universes.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUniverses()
+    {
+        return $this->universes;
+    }
+}

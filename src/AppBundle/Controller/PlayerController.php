@@ -24,7 +24,7 @@ class PlayerController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $players = $em->getRepository('AppBundle:Player')->findAll();
+        $players = $em->getRepository('AppBundle:Player')->findBy(array(), array('name' => 'ASC'));
 
         return $this->render('player/index.html.twig', array(
             'players' => $players,
